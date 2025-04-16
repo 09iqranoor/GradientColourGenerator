@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+
+
+
+
+
+
+ .rectangle{
+     height: 200px;
+     width: 200px;
+     background-color: antiquewhite;
+     border: 2px solid ;
+     transition: ease-in .5s;
+     margin: auto;
+      
+}
+.addTranslation{
+    border-radius: 50%;
+
+
+}
+.addTranslation2{
+    translate: -3rem 0;
+
+  background-color: aquamarine;
+}
+    </style>
+   
+</head>
+<body>
+      <div class="rectangle"></div>
+      <div id="myButton" >Click me</div> 
+
+
+
+
+
+<!-- Keyboard Event -->
+
+<input  type="text" id="myInput" placeholder="Type something" />
+
+<div class="output">
+    <div class="Keypressed">Keypressed</div>
+    <div class="KeyCode">Key COde</div>
+    <div class="CharCode">Char Codeat</div>
+    <div class="eventType">Event Type</div>
+    
+</div>
+
+
+
+      <script>
+     
+   
+       let myButton = document.getElementById('myButton');
+
+       let rectDiv = document.querySelector(".rectangle");
+   
+      
+   function handleMouseEvent1(){
+
+
+    rectDiv.style.backgroundColor ="red";
+   }
+
+   function handleMouseEvent2(){
+    
+
+     rectDiv.classList.add("addTranslation");
+   }
+    
+   function handleMouseEvent3(){
+    
+
+     rectDiv.classList.add("addTranslation2");
+   }
+    
+    rectDiv.addEventListener('click', handleMouseEvent1);
+    rectDiv.addEventListener('dblclick', handleMouseEvent2);
+    rectDiv.addEventListener('mouseover', handleMouseEvent3);
+
+       
+      </script>
+</body>
+</html>

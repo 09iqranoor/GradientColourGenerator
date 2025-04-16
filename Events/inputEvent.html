@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event </title>
+    <style>
+       body{
+        background-color: rgb(21, 54, 62);
+        
+
+       }
+       
+
+       section{
+        margin: auto;
+        height: auto;
+        width: 50%;
+        border: 2px solid white;  
+        /* padding: 20px; */
+         /* text-align: center;  */
+        margin-top: 20px;
+      
+       }
+       section input{
+          /* height: 40px; */
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          width: 93%;
+
+        
+          
+            
+       }
+       .output{
+       
+        background-color: rgb(172, 208, 214);
+        padding: 20px;
+         line-height: 2;
+       }
+    </style>
+</head>
+<body>
+     <section>
+          <input type="text" id="myInput" name="username" placeholder="Type something..." autocomplete="off"/>
+        <div class="output">
+
+            <div class="inputValue">Input Value: </div>
+            <div class="inputName">Input name: </div>
+            <div class="inputType">Inputtype: </div>
+            <div class="eventType">Event  type: </div>
+        </div>
+     </section>
+
+
+     <script>
+      const myInput = document.getElementById("myInput");
+
+
+      const handleInput = (e) => {
+   console.log(e);
+
+   console.log("input value:" , event.target.value);
+   console.log("input name:" , event.target.name);
+   console.log("input type:" , event.target.type);
+   console.log("input type:" , event.type);
+
+
+
+
+    document.querySelector(".inputValue").textContent =`Input Value:  ${event.target.value}`;
+    document.querySelector(".inputName").textContent =`Input Name:  ${event.target.name}`;
+    document.querySelector(".inputType").textContent =`Input Type:  ${event.inputType}`;
+    document.querySelector(".eventType").textContent =`Event Type:  ${event.type}`;
+
+      }
+
+      myInput.addEventListener('input' ,handleInput);
+
+
+     </script>
+</body>
+</html>
