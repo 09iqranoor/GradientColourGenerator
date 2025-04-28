@@ -40,11 +40,7 @@ Even though it's a small project, it has been a **huge milestone** in improving 
 
 ---
 
-## 📸 Screenshots
 
-> I will add screenshots here soon! 📷
-
----
 
 ## 📚 Learning Outcome
 
