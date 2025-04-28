@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Colour Change</title>
+    <style>
+        body{
+            height: 100vh; /* viewport height = full screen height */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    flex-direction: column;  /* taake sab kuch neeche aaye */
+ background-image: linear-gradient(to right, #004773, #54d542);
+}       
+
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+.button-86 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(29, 25, 25);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-86:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #d4caca;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+                  .btn{
+                  text-align: center;
+                     
+                  }
+                 
+                 
+                 
+        .copycode{
+           
+             border-left: 2px  solid;
+             /* padding: 15px; */
+             height: 50px;
+             cursor: pointer;
+             /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+           border-radius: 5px;
+         background-color:transparent;
+         transition: all 0.3s ease;
+
+         background: rgba(255, 255, 255, 0.1); /* white with low opacity */
+    backdrop-filter: blur(10px); /* blur effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    color: white;
+  
+                           
+        }  
+        .copycode:hover{
+       transform: translateY(-10px);
+        }
+        h2{
+            text-align: center;
+        } 
+    </style>
+</head>
+<body>
+     <section>
+        <div class="btn">
+            <button id="myButton" class="button-85"  >#1b401b;</button>
+            <button id="myButton2"  class="button-86" >#b6e3a6;</button>
+              
+        </div>
+        <h2>Copy your code here</h2>
+        <div class="copycode">
+            background-image: Linear-gradient(to right ,#1b401b , #7b2222);
+        </div>
+     </section>
+
+
+     <script>
+
+
+
+        let btn1 = document.getElementById("myButton");
+      let btn2 = document.getElementById("myButton2");
+      let copyCode = document.querySelector(".copycode");
+        let rgba1 = "#004773";
+        let rgba2 = ' #54d542';
+
+const hexValues = ()=>{
+    let myHexaValue = '0123456789abcdef';
+    let colors = "#";
+
+    for(let i = 0 ; i< 6 ; i++){
+        
+        colors =colors + myHexaValue[Math.floor(Math.random() * 16)];
+ 
+    }
+    // document.querySelector("#myButton").textContent = colors;
+    return (colors);
+}
+
+
+
+const handleButton1 = () => {
+    let rgba1 = hexValues();
+    btn1.innerText = rgba1;
+    document.body.style.backgroundImage = `linear-gradient(to right, ${rgba1}, ${rgba2})`;
+      copyCode.innerHTML = `  background-image: Linear-gradient(to right , ${rgba1}, ${rgba2}))
+    
+    `
+} 
+
+const handleButton2= () => {
+    let rgba2 = hexValues();
+btn2.innerText = rgba2;
+    document.body.style.backgroundImage = `linear-gradient(to right,  ${rgba1}, ${rgba2})`;
+      copyCode.innerHTML = ` background-image: Linear-gradient(to right ,  ${rgba1},${rgba2})
+    `  
+} 
+
+ 
+btn1.addEventListener("click" , handleButton1);
+btn2.addEventListener("click" , handleButton2);
+
+copyCode.addEventListener("click" , ()=>{
+
+   let copy =  navigator.clipboard.writeText(copyCode.innerText);
+   if(copy){
+    alert("Copied to clipboard");
+    
+   }
+})
+
+     </script>
+</body>
+</html>
