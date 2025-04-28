@@ -70,7 +70,7 @@ If you're learning JavaScript, I encourage you to build projects like these — 
 
 ## 🧿 Live Preview
 
-> (You can add your GitHub Pages link here if you deploy it)
+ https://09iqranoor.github.io/GradientColourGenerator/
 
 ---
 
